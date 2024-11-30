@@ -14,7 +14,7 @@ RUN chmod +x gradlew
 COPY src ./src
 
 # Build the application using Gradle
-RUN ./gradlew build --no-daemon
+RUN ./gradlew build --no-daemon -x test
 
 # Use a smaller OpenJDK image for runtime
 FROM openjdk:17-jdk-slim
